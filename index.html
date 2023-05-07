@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up for Classes</title>
+    <link rel="stylesheet" href="app.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<header>
+		<h1>Sign Up for Classes</h1>
+	</header>
+	<main>
+		<form onsubmit="sendEmail(); reset(); return false;" action="https://formsubmit.co/nangellasharon@gmail.com" method="POST">
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required>
+			
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required>
+
+            <label for="contact">Contact:</label>
+			<input type="contact" id="email" name="contact" required>
+			
+			<label for="class">Class:</label>
+			<select id="class" name="class" required>
+				<option value="">--Please select a class--</option>
+				<option value="AutoCAD">AutoCAD</option>
+				<option value="Civil3D">Civil3D</option>
+				<option value="ArcGIS">ArcGIS</option>
+			</select>
+			
+			<label for="message">Message:</label>
+			<textarea id="message" name="message"></textarea>
+			
+			<input type="submit" value="Sign Up">
+		</form>
+	</main>
+	<footer>
+		<p>&copy; 2023 All Rights Reserved.</p>
+	</footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "nangellasharon@gmail.com",
+                Password : "Bridgesarecool22",
+                To : 'schoolstudentsteach@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New Contct Form Enquiry",
+                Body : "And this is the body"
+            }).then(
+            message => alert(message)
+            );
+        }
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
