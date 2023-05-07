@@ -12,7 +12,7 @@
 		<h1>Sign Up for Classes</h1>
 	</header>
 	<main>
-		<form onsubmit="sendEmail(); reset(); return false;" action="https://formsubmit.co/nangellasharon@gmail.com" method="POST">
+		<form action="https://formsubmit.co/nangellasharon@gmail.com" method="POST">
 			<label for="name">Name:</label>
 			<input type="text" id="name" name="name" required>
 			
@@ -39,22 +39,6 @@
 	<footer>
 		<p>&copy; 2023 All Rights Reserved.</p>
 	</footer>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendEmail(){
-            Email.send({
-                Host : "smtp.gmail.com",
-                Username : "nangellasharon@gmail.com",
-                Password : "Bridgesarecool22",
-                To : 'schoolstudentsteach@gmail.com',
-                From : document.getElementById("email").value,
-                Subject : "New Contct Form Enquiry",
-                Body : "And this is the body"
-            }).then(
-            message => alert(message)
-            );
-        }
-    </script>
-    <script src="app.js"></script>
+       <script src="app.js"></script>
 </body>
 </html>
